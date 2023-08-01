@@ -9,6 +9,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 })
 export class HeroComponent implements OnInit {
   constructor() {}
-
+  public name: string = 'Ironman';
+  public age: number = 45;
   ngOnInit() {}
 }
