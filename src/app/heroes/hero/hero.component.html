@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Spider man</h1>
+  <h1>{{ name }}</h1>
 
   <dl>
     <td>Nombre:</td>
@@ -9,11 +9,15 @@
     <dd>{{ age }}</dd>
 
     <td>Método:</td>
-    <dd>algún método</dd>
+    <dd>{{ getHeroDescription() }}</dd>
 
     <td>Capitalizando:</td>
-    <dd>nombre capitalizado</dd>
+    <dd>{{ capitalizedName }}</dd>
   </dl>
-  <button class="btn btn-primary">Cambiar Nombre</button>
-  <button class="btn btn-success">Cambiar edad</button>
+  <div *ngIf="name !== 'spiderman'">
+    <button class="btn btn-primary" (click)="changeHero()">
+      Cambiar Nombre
+    </button>
+  </div>
+  <button class="btn btn-success" (click)="changeAge()">Cambiar edad</button>
 </div>

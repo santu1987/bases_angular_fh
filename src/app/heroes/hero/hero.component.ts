@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { bootstrapApplication } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-hero',
@@ -11,5 +10,22 @@ export class HeroComponent implements OnInit {
   constructor() {}
   public name: string = 'Ironman';
   public age: number = 45;
+
+  get capitalizedName(): string {
+    return this.name.toUpperCase();
+  }
+
+  getHeroDescription(): string {
+    return `${this.name} - ${this.age}`;
+  }
+
+  changeHero(): void {
+    this.name = 'Spiderman';
+  }
+
+  changeAge(): void {
+    this.age = 23;
+  }
+
   ngOnInit() {}
 }
