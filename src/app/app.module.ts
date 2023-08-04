@@ -6,7 +6,7 @@ import { CounterComponent } from './counter/counter.component';
 import { HeroComponent } from './heroes/hero/hero.component';
 
 @NgModule({
-  imports: [CommonModule, CounterComponent, HeroComponent],
+  imports: [BrowserModule, CounterComponent, HeroComponent],
   declarations: [],
 })
 export class AppModule {}

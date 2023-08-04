@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css'],
   standalone: true,
+  imports: [CommonModule]
 })
 export class HeroComponent implements OnInit {
   constructor() {}
