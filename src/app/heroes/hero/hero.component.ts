@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule],
 })
 export class HeroComponent implements OnInit {
   constructor() {}
@@ -29,5 +29,10 @@ export class HeroComponent implements OnInit {
     this.age = 23;
   }
 
+  resetForm(): void {
+    this.name = 'ironman';
+    this.age = 45;
+  }
+//Si hiciera cambios desde js y no de angular estos cambios no se aplican porque estan fuera del ciclo de detección de cambios.
   ngOnInit() {}
 }

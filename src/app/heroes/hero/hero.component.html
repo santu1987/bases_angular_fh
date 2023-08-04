@@ -19,5 +19,8 @@
       Cambiar Nombre
     </button>
   </div>
-  <button class="btn btn-success" (click)="changeAge()">Cambiar edad</button>
+  <button *ngIf="age !== 23" class="btn btn-success" (click)="changeAge()">
+    Cambiar edad
+  </button>
+  <button class="btn btn-warning" (click)="resetForm()">Reset</button>
 </div>
